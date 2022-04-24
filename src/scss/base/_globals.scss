@@ -1,0 +1,48 @@
+@use '../abstracts/' as *;
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--fs-300);
+  color: var(--clr-white);
+  background-color: var(--clr-blue-800);
+  letter-spacing: $letter-spacing-2;
+}
+
+main {
+  flex: auto;
+}
+
+:focus {
+  outline: 1px solid var(--clr-neutral-700);
+  outline-offset: 0.2rem;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  &:hover:not([class]) {
+    text-underline-offset: 2px;
+    text-decoration-color: var(--clr-neutral-100);
+    text-decoration: underline;
+  }
+}
+
+[tabindex="-1"] {
+  outline: none;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  padding: 0;
+}
+
+address {
+  display: inline;
+  font-style: normal;
+}
+
+br {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}

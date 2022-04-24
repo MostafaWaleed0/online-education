@@ -1,0 +1,48 @@
+@use '../abstracts/spacing' as *;
+
+@each $space, $contents in $spaces {
+  @each $content, $value in $contents {
+    @if $space == normal {
+      .margin-right-#{$content} {
+        margin-inline-end: var(--space-#{$content});
+      }
+      .gap-#{$content} {
+        gap: var(--space-#{$content});
+      }
+      .margin-bottom-#{$content} {
+        margin-block-end: var(--space-#{$content});
+      }
+
+      .padding-inline-#{$content} {
+        padding-inline: var(--space-#{$content});
+      }
+
+      .padding-bottom-#{$content} {
+        padding-block-end: var(--space-#{$content});
+      }
+
+      .padding-top-#{$content} {
+        padding-block-start: var(--space-#{$content});
+      }
+
+      .gap-#{$content} {
+        gap: var(--space-#{$content});
+      }
+    }
+
+    @if $space == container {
+      .padding-block-#{$content} {
+        padding-block: var(--space-container-#{$content});
+      }
+    }
+  }
+}
+
+.padding-2 {
+  padding: var(--space-2);
+}
+
+
+.padding-4 {
+  padding: var(--space-4);
+}

@@ -1,0 +1,23 @@
+@use './function' as *;
+
+$spaces: (
+  normal: (
+    1: rem(10),
+    2: rem(15),
+    3: rem(20),
+    4: rem(25),
+    5: rem(35),
+    6: rem(40),
+    7: rem(45),
+    8: rem(80),
+  ),
+  container: (
+    1: rem(80),
+    2: rem(112),
+    3: rem(160),
+  ),
+);
+
+//letter-spacing
+$letter-spacing-1: 0.1px;
+$letter-spacing-2: 0.2px;

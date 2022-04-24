@@ -1,0 +1,20 @@
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.center-xy {
+  display: grid;
+  place-items: center;
+}

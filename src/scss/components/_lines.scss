@@ -1,0 +1,13 @@
+@use '../abstracts/function' as *;
+
+.card-line {
+  width: rem(50);
+  height: rem(2);
+  background: var(--clr-red-200);
+}
+
+.section-title__line {
+  width: rem(94);
+  height: rem(7);
+  background: var(--clr-red-200);
+}

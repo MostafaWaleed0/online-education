@@ -1,0 +1,27 @@
+@use '../abstracts/' as *;
+
+.site-foot {
+  > * > ul {
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint-down(medium) {
+      flex-wrap: wrap;
+    }
+
+    > li {
+      --flow-space: var(--space-3);
+
+       p, address {
+         align-items: center;
+       }
+    }
+  }
+
+  &__social {
+    .container {
+      justify-content: space-between;
+      align-items: center;
+      min-height: rem(74);
+    }
+  }
+}

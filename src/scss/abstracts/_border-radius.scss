@@ -1,0 +1,10 @@
+@use 'function' as *;
+
+$rounded: (
+  1: em(3),
+  2: em(5),
+  3: em(6),
+  4: em(20),
+  5: em(37),
+  full: 50%,
+);

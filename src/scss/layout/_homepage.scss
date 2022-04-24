@@ -1,0 +1,219 @@
+@use '../abstracts/' as *;
+
+.main {
+  .skills {
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint-down(large) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cards {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+
+      .card {
+        --flow-space: var(--space-3);
+        padding: var(--space-5) 0 0 var(--space-6);
+        width: rem(223);
+        height: rem(288);
+
+        span {
+          font-size: clamp(1rem, 3vw, var(--fs-600));
+          height: clamp(rem(40), 6vw, rem(72));
+          aspect-ratio: 1 / 1;
+          border-radius: var(--rounded-full);
+        }
+
+        &:nth-last-of-type(2) {
+          @include breakpoint-down(large) {
+            display: none;
+          }
+        }
+
+        &:nth-last-of-type(2) {
+          grid-row-start: span 2;
+        }
+
+        @include breakpoint-down(small) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .popular {
+    align-items: center;
+    justify-content: space-between;
+    @include breakpoint-down(large) {
+      flex-direction: column;
+    }
+  }
+
+  .video {
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint-down(large) {
+      flex-direction: column;
+    }
+
+    &-img {
+      position: relative;
+      @include breakpoint-down(large) {
+        order: -1;
+      }
+
+      img {
+        border-radius: var(--rounded-4);
+      }
+
+      span {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        height: rem(90);
+        aspect-ratio: 1/ 1;
+        border-radius: var(--rounded-full);
+      }
+    }
+  }
+
+  .store {
+    --flow-space: var(--space-8);
+
+    .cards {
+      --auto-grid-min-size: 16rem;
+      .card {
+        &-img {
+          @include pseudo() {
+            content: 'sale';
+            inset: var(--space-3) auto auto var(--space-3);
+            font-weight: var(--fw-bold);
+            font-size: var(--fs-300);
+            padding-inline: var(--space-1);
+            border-radius: var(--rounded-1);
+            background: var(--clr-red-400);
+          }
+
+          img {
+            min-width: 100%;
+          }
+        }
+
+        &-icons {
+          justify-content: center;
+          position: absolute;
+          inset: 80% 0 0 0;
+          margin-inline: 15%;
+
+          span {
+            height: rem(40);
+            aspect-ratio: 1 /1;
+            border-radius: var(--rounded-full);
+          }
+        }
+
+        &-body {
+          --flow-space: var(--space-1);
+          
+          &__header {
+            justify-content: space-between;
+          }
+
+          &__evaluation {
+            justify-content: center;
+            align-items: center;
+            border-radius: var(--rounded-4);
+            padding: calc(var(--space-1) - rem(5));
+          }
+        }
+      }
+    }
+  }
+
+  .teachers {
+    --flow-space: var(--space-8);
+    .cards {
+      --auto-grid-min-size: 18rem;
+      .card {
+        justify-content: center;
+        width: 100%;
+
+        &-content {
+          --flow-space: var(--space-2);
+        }
+
+        &-icons {
+          justify-content: center;
+        }
+
+        p {
+          --width:17ch;
+        }
+      }
+    }
+  }
+
+  .team {
+    --flow-space: var(--space-container-2);
+
+    .cards {
+      --auto-grid-min-size: 14rem;
+      .card {
+        width: fit-content;
+
+        &-img {
+          img {
+            border-radius: var(--rounded-4) var(--rounded-4) 0 0;
+          }
+        }
+
+        &-body {
+          --flow-space: var(--space-1);
+          border-radius: 0 0 var(--rounded-4) var(--rounded-4);
+        }
+
+        &-icons {
+          justify-content: center;
+
+          > * {
+            max-height: rem(24);
+            aspect-ratio: 1 /1;
+          }
+        }
+      }
+    }
+  }
+
+  .email {
+    --flow-space: var(--space-8);
+
+      form {
+        border: 1px solid var(--clr-gray-200);
+        border-radius: var(--rounded-2);
+        width: 100%;
+        max-width: rem(688);
+
+      input {
+        flex: 1;
+        height: rem(58);
+        border-radius: var(--rounded-2) 0 0 var(--rounded-2);
+        border: none;
+        outline:none;
+
+        &::placeholder {
+          color: var(--clr-gray-400);
+        }
+      }
+      span {
+        button {
+          border: none;
+          outline:none;
+        }
+      }
+    }
+  }
+}

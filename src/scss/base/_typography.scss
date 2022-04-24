@@ -1,0 +1,17 @@
+@use '../abstracts/' as *;
+
+h1 {
+  max-width: 18ch;
+}
+
+p {
+  line-height: 1.43;
+  max-width: var(--width);
+}
+
+a {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  color: inherit;
+  line-height: 1.71;
+}

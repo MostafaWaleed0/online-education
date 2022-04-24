@@ -1,0 +1,55 @@
+@use '../abstracts/' as *;
+
+:root {
+  // Colors
+  @each $color, $shades in $colors {
+    @each $shade, $value in $shades {
+      @if $value {
+        --clr-#{$color}-#{$shade}: #{$value};
+      } @else {
+        --clr-#{$color}: #{$color};
+      }
+    }
+  }
+
+  // Font Size
+  @each $screen-size, $property in $type-scale {
+    @if $screen-size == small {
+      @each $prop, $value in $property {
+        --fs-#{$prop}: #{$value};
+      }
+    } @else {
+      @include breakpoint(medium) {
+        @each $prop, $value in $property {
+          --fs-#{$prop}: #{$value};
+        }
+      }
+    }
+  }
+
+  // Font Weight
+  @each $size, $value in $type-weight {
+    --fw-#{$size}: #{$value};
+  }
+
+  // Border Radius
+  @each $round, $value in $rounded {
+    --rounded-#{$round}: #{$value};
+  }
+
+  // Spacing
+  @each $space, $contents in $spaces {
+    @each $content, $value in $contents {
+      @if $space == normal {
+        --space-#{$content}: #{$value};
+      } @else {
+        --space-#{$space}-#{$content}: #{$value};
+        @include breakpoint-down(medium) {
+          --space-#{$space}-#{$content}: 5rem;
+        }
+      }
+    }
+  }
+
+  --header-height: 5.6875rem;
+}

@@ -1,0 +1,6 @@
+@use '../abstracts/' as *;
+
+.container {
+  width: min(100% - 2rem, 65.3125rem);
+  margin-inline: auto;
+}
