@@ -1,19 +1,23 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 .site-foot {
-  > * > ul {
+  nav {
     align-items: center;
     justify-content: space-between;
+    gap: var(--space-4);
     @include breakpoint-down(medium) {
       flex-wrap: wrap;
     }
 
-    > li {
+    ul {
       --flow-space: var(--space-3);
+      gap: var(--space-1);
 
-       p, address {
-         align-items: center;
-       }
+      > li {
+        > * {
+          align-items: center;
+        }
+      }
     }
   }
 

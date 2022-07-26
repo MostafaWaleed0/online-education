@@ -1,20 +1,20 @@
 $colors: (
-  gray: (
-    600: #252a41,
-    400: #737373,
-    200: #bdbdbd,
+  "neutral": (
+    "900": black,
+    "700": #252a41,
+    "400": #737373,
+    "200": #bdbdbd,
+    "100": #ffffff,
   ),
-  red: (
-    400: #e74040,
-    200: #ff7a52,
+  "red": (
+    "400": #e74040,
+    "200": #ff7a52,
   ),
-  blue: (
-    800: #26335e,
+  "blue": (
+    "800": #26335e,
   ),
-  purple: (
-    400: #8c5af6,
+  "purple": (
+    "400": #8c5af6,
   ),
-  gold: gold,
-  black: black,
-  white: white,
+  "gold": gold,
 );

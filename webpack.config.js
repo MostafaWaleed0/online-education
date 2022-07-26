@@ -1,20 +1,20 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin'),
-  MiniCssExtractPlugin = require('mini-css-extract-plugin'),
-  path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin"),
+  MiniCssExtractPlugin = require("mini-css-extract-plugin"),
+  path = require("path");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js',
+    path: path.join(__dirname, "/dist"),
+    filename: "bundle.js",
     clean: true,
   },
-  devtool: 'source-map',
+  devtool: "source-map",
 
   optimization: {
     minimizer: [
       new HtmlWebpackPlugin({
-        template: './src/template.html',
+        template: "./src/index.html",
         inject: true,
         minify: {
           caseSensitive: true,
@@ -22,7 +22,7 @@ module.exports = {
           conservativeCollapse: true,
           keepClosingSlash: true,
           minifyCSS: true,
-          minifyJS: true,
+          uglifyJS: true,
           removeComments: true,
           removeRedundantAttributes: true,
           removeScriptTypeAttributes: true,
@@ -35,32 +35,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader',
-      },
-
-      {
         test: /\.html$/,
-        loader: 'html-loader',
+        loader: "html-loader",
       },
 
       {
         test: /\.(jpe?g|png|gif)$/,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: 'img/[hash][ext]',
+          filename: "img/[hash][ext]",
         },
       },
 
       {
         test: /\.(css)$/,
-        exclude: path.resolve(__dirname, 'node_modules'),
+        exclude: path.resolve(__dirname, "node_modules"),
         use: [
           {
-            loader: 'style-loader',
+            loader: "style-loader",
           },
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          "css-loader",
         ],
       },
     ],
@@ -68,7 +63,7 @@ module.exports = {
 
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name][contenthash].css',
+      filename: "css/[name][contenthash].css",
     }),
   ],
 };

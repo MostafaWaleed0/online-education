@@ -1,12 +1,12 @@
-@use '../abstracts/function' as *;
+@use "../abstracts/function" as *;
 
-.card-line {
+.line-small {
   width: rem(50);
   height: rem(2);
   background: var(--clr-red-200);
 }
 
-.section-title__line {
+.line-big {
   width: rem(94);
   height: rem(7);
   background: var(--clr-red-200);

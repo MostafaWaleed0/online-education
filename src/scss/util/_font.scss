@@ -1,25 +1,24 @@
-@use '../abstracts/type' as *;
+@use "../abstracts/type" as *;
 
 @each $screen-size, $property in $type-scale {
   @each $prop, $value in $property {
     @if $screen-size == small {
-      @if($prop == '800') {
+      @if ($prop == "800") {
         .fs-#{$prop} {
           font-size: var(--fs-#{$prop});
           line-height: 1.38;
         }
-      }@else if ($prop == '700') {
+      } @else if ($prop == "700") {
         .fs-#{$prop} {
           font-size: var(--fs-#{$prop});
           line-height: 1.25;
         }
-      }@else if ($prop == '600') {
+      } @else if ($prop == "600") {
         .fs-#{$prop} {
           font-size: var(--fs-#{$prop});
           line-height: 1.33;
         }
-      }
-      @else {
+      } @else {
         .fs-#{$prop} {
           font-size: var(--fs-#{$prop});
         }
@@ -40,4 +39,8 @@
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
 }

@@ -1,15 +1,19 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  gap: var(--space-1);
   font-weight: var(--fw-bold);
-  color: var(--clr-white);
-  line-height: 157%;
+  color: var(--clr-neutral-100);
+  line-height: 1.57;
+  outline: 0;
+  text-decoration: none;
 
-  &--header {
+  &--head {
     background: var(--clr-purple-400);
     padding: var(--space-2) var(--space-4);
     border-radius: var(--rounded-2);
+    text-transform: uppercase;
   }
 
   &--hero {
@@ -22,14 +26,14 @@
     color: var(--clr-purple-400);
     border: 1px solid var(--clr-purple-400);
     padding: var(--space-1) var(--space-3);
-    border-radius: var(--rounded-5);
+    border-radius: var(--rounded-full);
   }
 
   &--input {
     height: rem(58);
     min-width: min(24vw, rem(117));
     background: var(--clr-purple-400);
-    color: var(--clr-white);
+    color: var(--clr-neutral-100);
     border-radius: 0 var(--rounded-2) var(--rounded-2) 0;
   }
 }

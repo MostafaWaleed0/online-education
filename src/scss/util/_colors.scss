@@ -1,4 +1,4 @@
-@use '../abstracts/colors' as *;
+@use "../abstracts/colors" as *;
 
 @each $color, $shades in $colors {
   @each $shade, $value in $shades {

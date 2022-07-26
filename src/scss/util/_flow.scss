@@ -1,4 +1,4 @@
-@use '../abstracts/function' as *;
+@use "../abstracts/function" as *;
 
 .flow > * + * {
   margin-top: var(--flow-space, rem(35));

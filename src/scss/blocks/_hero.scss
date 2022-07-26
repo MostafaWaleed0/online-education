@@ -1,19 +1,15 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 .hero {
   position: relative;
   width: 100vw;
   height: rem(729);
-  background: url('./../img/hero-3-cover.jpg') 65% top / cover no-repeat;
+  background: url("./../img/hero-3-cover.jpg") 65% top / cover no-repeat;
 
   .container {
     padding-top: min(
       33vw,
       calc(var(--space-container-2) + var(--header-height))
     );
-
-    p:last-of-type {
-      --width: 22ch;
-    }
   }
 }

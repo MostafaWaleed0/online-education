@@ -1,0 +1,21 @@
+.post[data-type="default"] {
+  --flow-space: var(--space-5);
+
+  p {
+    --width: 39ch;
+  }
+
+  [href] {
+    gap: var(--space-1);
+    text-transform: capitalize;
+    color: var(--clr-purple-400);
+  }
+}
+
+.post[data-type="secondary"] {
+  --flow-space: var(--space-1);
+}
+
+.post[data-align="center"] {
+  text-align: center;
+}

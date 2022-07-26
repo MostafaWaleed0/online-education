@@ -1,39 +1,31 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: var(--fs-300);
-  color: var(--clr-white);
   background-color: var(--clr-blue-800);
-  letter-spacing: $letter-spacing-2;
 }
 
 main {
-  flex: auto;
+  grid-template-rows: auto 1fr auto;
 }
 
 :focus {
-  outline: 1px solid var(--clr-neutral-700);
+  outline: 1px solid var(--clr-purple-400);
   outline-offset: 0.2rem;
 }
 
 a {
-  display: inline-block;
+  display: inline-flex;
   text-decoration: none;
-  &:hover:not([class]) {
-    text-underline-offset: 2px;
-    text-decoration-color: var(--clr-neutral-100);
-    text-decoration: underline;
-  }
 }
 
 [tabindex="-1"] {
   outline: none;
 }
 
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   padding: 0;
+  margin-bottom: 0;
 }
 
 address {

@@ -1,4 +1,4 @@
-@use '../abstracts/spacing' as *;
+@use "../abstracts/spacing" as *;
 
 @each $space, $contents in $spaces {
   @each $content, $value in $contents {
@@ -24,10 +24,6 @@
       .padding-top-#{$content} {
         padding-block-start: var(--space-#{$content});
       }
-
-      .gap-#{$content} {
-        gap: var(--space-#{$content});
-      }
     }
 
     @if $space == container {
@@ -41,7 +37,6 @@
 .padding-2 {
   padding: var(--space-2);
 }
-
 
 .padding-4 {
   padding: var(--space-4);

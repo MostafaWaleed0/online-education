@@ -1,12 +1,29 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--fs-300);
+  color: var(--clr-neutral-100);
+  letter-spacing: $letter-spacing-2;
+}
 
 h1 {
+  font-size: var(--fs-800);
   max-width: 18ch;
+  line-height: 1.38;
+  color: inherit;
+}
+
+h2 {
+  font-size: var(--fs-700);
+  line-height: 1.25;
+  color: inherit;
 }
 
 p {
   line-height: 1.43;
   max-width: var(--width);
+  color: inherit;
 }
 
 a {

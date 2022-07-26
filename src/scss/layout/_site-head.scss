@@ -1,0 +1,60 @@
+@use "../abstracts/" as *;
+
+.site-head {
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  z-index: 1000;
+  height: min-content;
+  padding-block: var(--space-3);
+
+  &__inner {
+    align-items: center;
+    justify-content: space-between;
+
+    nav {
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      width: 100%;
+
+      @include breakpoint-down(medium) {
+        @include position(absolute, $top: 0, $left: 0, $z-index: 1000);
+        background: var(--clr-blue-800);
+        flex-direction: column;
+        padding: var(--space-8) 0 var(--space-8);
+        transition: 0.3s ease-out;
+        transform: translateY(-100%);
+      }
+
+      &[data-visible="true"] {
+        transform: translateY(0);
+      }
+
+      > ul {
+        align-items: center;
+        margin: 0;
+      }
+    }
+  }
+
+  &__primary-navigation {
+    gap: var(--space-5);
+  }
+
+  &__toggle {
+    @include position(
+      absolute,
+      $top: var(--space-2),
+      $right: var(--space-2),
+      $z-index: 1000
+    );
+
+    cursor: pointer;
+    background: none;
+    border: 0;
+    @include breakpoint(large) {
+      display: none;
+    }
+  }
+}

@@ -1,3 +1,3 @@
-import './style/style.css';
+import "./css/main.css";
 
-this.importAll(require.context('./img/', true, /\.(jpe?g|png|gif|svg)$/));
+this.importAll(require.context("./img/", true, /\.(jpe?g|png|gif|svg)$/));
